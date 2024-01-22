@@ -21,6 +21,8 @@ func ProcessReceipt(c *gin.Context) {
 		return
 	}
 
+	// TODO: it would be wise to perform some validation/sanitation on the incoming request as well
+
 	// generate unique id for this receipt
 	id := uuid.New().String()
 
@@ -34,6 +36,8 @@ func ProcessReceipt(c *gin.Context) {
 func GetPoints(c *gin.Context) {
 	// extract id from url
 	id := c.Param("id")
+
+	// TODO: it would be wise to perform some validation/sanitation on the incoming request as well
 
 	// get receipt from db, error if not found
 	receipt, err := db.GetReceipt(id)

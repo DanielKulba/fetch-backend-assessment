@@ -32,3 +32,7 @@ func SaveReceipt(id string, receipt models.Receipt) error {
 	data[id] = receipt
 	return nil
 }
+
+func getData() map[string]models.Receipt {
+	return data
+}

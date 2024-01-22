@@ -36,6 +36,7 @@ func perTwoItems(items []models.Item) int {
 	total := 0
 
 	for i, item := range items {
+		// ensure that items are not empty
 		if i%2 == 1 && item.ShortDescription != "" {
 			total++
 		}
